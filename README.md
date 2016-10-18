@@ -16,7 +16,7 @@ The primary thing our 'pixes' do is change color. These little guys will be the 
   })
 ```
 
-All of our code will live within this piece of code. 
+All of our code will live within this piece of code.
 
 - Make it so that when we click on a pixel, it changes to white
   - Notice in the our index.html file each div has the class of 'box'
@@ -34,7 +34,7 @@ Our style.css file has a class named white. All it does is change the background
 In theory this would change the black box we click on to a white box, but what happens when we try it out?
 It looks as though when we click on a box, all of our boxes are turning white!
 
-This is because they all share the same class, by the name of box. We are currently telling jQuery that anything with the class 'box' should also have the class 'white'. This is a common problem in jQuery. Now we could give each div in the list of all 5400 divs their own unique ID, but I've got a better idea. 
+This is because they all share the same class, by the name of box. We are currently telling jQuery that anything with the class 'box' should also have the class 'white'. This is a common problem in jQuery. Now we could give each div in the list of all 5400 divs their own unique ID, but I've got a better idea.
 
 - Use the 'this' keyword
 
