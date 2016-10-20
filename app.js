@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+    var mouseDown = 0;
+    document.body.onmousedown = function() {
+        ++mouseDown;
+    }
+    document.body.onmouseup = function() {
+        --mouseDown;
+    }
+
     var colors = 'red green blue yellow white';
 
 	var color = 'white';
@@ -30,6 +38,12 @@ $(document).ready(function() {
 
     $('.box').on('dblclick', function() {
         $(this).removeClass(colors);
+    })
+
+    $('.box').on('mouseenter', function() {
+        if (mouseDown) {
+            $(this).addClass(color);
+        }
     })
 
     $('#reset').on('click', function() {
